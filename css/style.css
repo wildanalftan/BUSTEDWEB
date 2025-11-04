@@ -1,0 +1,36 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a1a1a;
+}
+
+.hero-image,
+.cta-image {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(0.5);
+}
+
+.hero-image::after,
+.cta-image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.about-image {
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
