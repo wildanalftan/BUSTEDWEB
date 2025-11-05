@@ -3,6 +3,18 @@ body {
   background-color: #1a1a1a;
 }
 
+#shop {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  background-color: #000; 
+  text-align: center;
+  text-align-last: auto;
+  position: relative;
+  overflow: hidden;
+}
+
 .hero-image,
 .cta-image {
   background-size: cover;
@@ -26,11 +38,69 @@ body {
   filter: brightness(0.9);
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.card {
+  border: 1px solid rgba(252, 252, 252, 0.15); 
   transition: all 0.3s ease;
+  background-color: #000000; 
 }
+
+.card:hover {
+  border-color: rgba(157, 157, 157, 0.35);
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(126, 126, 126, 0.1); 
+}
+
 
 .btn:hover {
   opacity: 0.8;
 }
+
+.contact-bg {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(0.4);
+}
+
+.contact-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+.form-control::placeholder {
+  color: #ccc !important;
+  opacity: 1; 
+}
+
+
+.form-control:focus {
+  border-color: #fff;
+  box-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+.shop-card {
+  flex: 0 0 30%; 
+  margin-right: 16px;
+}
+
+footer {
+  padding: 8px 0; 
+  font-size: 0.85rem; 
+}
+
+footer .container {
+  gap: 4px;
+}
+
+footer a {
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+
