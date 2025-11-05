@@ -1,7 +1,19 @@
 body {
-  background-color: #000;
-  color: #fff;
+  min-height: auto;
   font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* lapisan gelap transparan */
+    url('WE\ ARE\ READY\ TO\ GET\ BUSTED🥷🏼.png') no-repeat center center fixed; /* ganti dengan lokasi gambarmu */
+  background-size: cover;
+}
+
+.hero {
+  height: 100vh; /* 100% tinggi layar */
+  background-image: url('img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Shop Section */
@@ -14,6 +26,10 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* lapisan gelap transparan */
+    url('WE\ ARE\ READY\ TO\ GET\ BUSTED🥷🏼.png') no-repeat center center fixed; /* ganti dengan lokasi gambarmu */
+  background-size: cover;
 }
 
 #shop h2 {
@@ -146,4 +162,13 @@ body {
 
 .footer hr {
   opacity: 0.3;
+}
+
+.product-image {
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
 }
