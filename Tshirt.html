@@ -20,10 +20,15 @@
         <a class="nav-link text-light text-uppercase mx-2" href="index.html#contact">Contact</a>
       </nav>
 
-      <div>
-        <a href="#" class="text-light fs-5 me-3">🛒</a>
+    <div>
+        <a href="cart.html" class="text-light fs-5 me-3 position-relative">
+          🛒
+          <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </a>
         <a href="#" class="text-light fs-5">👤</a>
-      </div>
+    </div>
     </div>
   </header>
 
@@ -40,7 +45,14 @@
         <div class="card-body">
           <h3 class="h5 text-uppercase mb-2"> BUSTED WORLD - Classic T-Shirt</h3>
           <p class="text-secondary mb-3">Rp 249.000</p>
-          <a href="classic-tshirt.html" class="btn btn-light btn-sm text-uppercase">View Details</a>
+          <a href="#" 
+            class="btn btn-light btn-sm text-uppercase add-to-cart"
+            data-name="BUSTED WORLD - Classic T-Shirt"
+            data-price="249000"
+            data-image="img-logo/busted.png">
+             Add cart
+          </a>
+
         </div>
       </div>
 
@@ -49,7 +61,14 @@
         <div class="card-body">
           <h3 class="h5 text-uppercase mb-2">BUSTED WORLD - ESSENTIAL T-SHIRT </h3>
           <p class="text-secondary mb-3">Rp 399.000</p>
-          <a href="essential-tshirt.html" class="btn btn-light btn-sm text-uppercase">View Details</a>
+          <a href="#" 
+            class="btn btn-light btn-sm text-uppercase add-to-cart"
+            data-name="BUSTED WORLD - ESSENTIAL T-SHIRT"
+            data-price="399000"
+            data-image="img-logo/busted.png">
+            Add cart
+        </a>
+
         </div>
       </div>
 
@@ -58,7 +77,13 @@
         <div class="card-body">
           <h3 class="h5 text-uppercase mb-2">BUSTED WORLD - BUSTED EVERYWERE </h3>
           <p class="text-secondary mb-3">Rp 179.000</p>
-          <a href="busted-everywhere.html" class="btn btn-light btn-sm text-uppercase">View Details</a>
+          <a href="#" 
+            class="btn btn-light btn-sm text-uppercase add-to-cart"
+            data-name="BUSTED WORLD - BUSTED EVERYWERE"
+            data-price="179000"
+            data-image="img-logo/busted.png">
+            Add cart
+        </a>
         </div>
       </div>
 
@@ -67,7 +92,13 @@
         <div class="card-body">
           <h3 class="h5 text-uppercase mb-2">BUSTED WORLD - NEWS</h3>
           <p class="text-secondary mb-3">Rp 329.000</p>
-          <a href="busted-news.html" class="btn btn-light btn-sm text-uppercase">View Details</a>
+          <a href="#" 
+            class="btn btn-light btn-sm text-uppercase add-to-cart"
+            data-name="BUSTED WORLD - NEWS"
+            data-price="329000"
+            data-image="img-logo/busted.png">
+            Add cart
+        </a>
         </div>
       </div>
 
@@ -76,7 +107,13 @@
         <div class="card-body">
           <h3 class="h5 text-uppercase mb-2">BUSTED WORLD - WE ARE UNDER ARREST</h3>
           <p class="text-secondary mb-3">Rp 199.000</p>
-          <a href="busted-we-are-under-arrest.html" class="btn btn-light btn-sm text-uppercase">View Details</a>
+          <a href="#" 
+            class="btn btn-light btn-sm text-uppercase add-to-cart"
+            data-name="BUSTED WORLD - WE ARE UNDER ARREST"
+            data-price="199000"
+            data-image="img-logo/busted.png">
+            Add cart
+        </a>
         </div>
       </div>
 
@@ -138,20 +175,7 @@
 </footer>
 </footer>
 
-  <script>
-    function scrollShop(direction) {
-  const container = document.getElementById('shopContainer');
-  const card = container.querySelector('.shop-card');
-  const gap = 16; 
-  const scrollAmount = card.offsetWidth + gap; 
-  
-  container.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth'
-  });
-}
-  </script>
-
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

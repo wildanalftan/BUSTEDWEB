@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran - BUSTED WORLD</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/collections.css">
+</head>
+<body class="bg-black text-light">
+
+  <div class="container py-5">
+    <h2 class="text-uppercase mb-4">Pembayaran</h2>
+
+    <!-- Daftar produk -->
+    <div class="table-responsive">
+      <table class="table table-dark table-striped align-middle">
+        <thead>
+          <tr>
+            <th>Produk</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="paymentTable"></tbody>
+      </table>
+    </div>
+
+    <h4 class="mt-4">Total Pembayaran: <span id="totalPembayaran">Rp 0</span></h4>
+
+    <!-- Form pembayaran -->
+    <div class="mt-5">
+      <h5 class="text-uppercase mb-3">Data Pembeli</h5>
+      <form id="paymentForm">
+        <div class="mb-3">
+          <label class="form-label">Nama Lengkap</label>
+          <input type="text" class="form-control" id="nama" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Alamat Pengiriman</label>
+          <textarea class="form-control" id="alamat" rows="2" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Metode Pembayaran</label>
+          <select class="form-select" id="metodePembayaran" required>
+            <option value="">Pilih Metode</option>
+            <option value="qris">QRIS</option>
+            <option value="ovo">OVO</option>
+            <option value="mandiri">Bank Mandiri</option>
+            <option value="bri">Bank BRI</option>
+            <option value="bni">Bank BNI</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-light text-uppercase mt-3">Bayar Sekarang</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/payment.js"></script>
+</body>
+</html>
