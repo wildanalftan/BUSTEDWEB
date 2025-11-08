@@ -1,4 +1,3 @@
-// payment.js
 
 document.addEventListener("DOMContentLoaded", function () {
   const paymentTable = document.getElementById("paymentTable");
