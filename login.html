@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - BUSTED WORLD</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="bg-dark text-light d-flex align-items-center justify-content-center vh-100">
+
+  <div class="auth-card p-4 rounded shadow-lg bg-black text-light">
+    <h2 class="text-center mb-4">Login</h2>
+
+    <form id="loginForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Masukkan email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Masukkan password" required>
+      </div>
+
+      <button type="submit" class="btn btn-light w-100 text-uppercase fw-semibold">Login</button>
+    </form>
+
+    <p class="text-center mt-3 mb-0">Belum punya akun?
+      <a href="register.html" class="text-decoration-none text-info">Register</a>
+    </p>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
