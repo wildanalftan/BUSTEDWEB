@@ -4,12 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const paymentTable = document.getElementById("paymentTable");
   const totalPembayaran = document.getElementById("totalPembayaran");
   const form = document.getElementById("paymentForm");
-
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let cart = JSON.parse(localStorage.getItem("checkoutCart")) || JSON.parse(localStorage.getItem("cart")) || [];
 
   function renderPayment() {
     paymentTable.innerHTML = "";
     let total = 0;
+
+    if (cart.length === 0) {
+      paymentTable.innerHTML = `
+        <tr>
+          <td colspan="4" class="text-center text-secondary">Tidak ada data pembayaran.</td>
+        </tr>
+      `;
+      totalPembayaran.textContent = "Rp 0";
+      return;
+    }
 
     cart.forEach((item) => {
       const subtotal = item.price * item.quantity;
@@ -43,18 +52,27 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    if (nama && alamat && metode) {
-      alert(
-        `Terima kasih ${nama}! Pembayaran sebesar ${
-          totalPembayaran.textContent
-        } dengan metode ${metode.toUpperCase()} berhasil dilakukan.`
-      );
-
-      // Hapus keranjang setelah pembayaran
-      localStorage.removeItem("cart");
-
-      // Arahkan ke halaman utama
-      window.location.href = "index.html";
+    if (!nama || !alamat || !metode) {
+      alert("Harap isi semua data pembayaran!");
+      return;
     }
+    const history = JSON.parse(localStorage.getItem("history")) || [];
+    const tanggal = new Date().toLocaleDateString("id-ID", { day: "2-digit", month: "short", year: "numeric" });
+
+    cart.forEach((item) => {
+      history.push({
+        tanggal: tanggal,
+        produk: item.name,
+        jumlah: item.quantity,
+        total: `Rp ${(item.price * item.quantity).toLocaleString("id-ID")}`,
+        status: "Selesai",
+      });
+    });
+    localStorage.setItem("history", JSON.stringify(history));
+    localStorage.removeItem("cart");
+    localStorage.removeItem("checkoutCart");
+
+    alert(`Terima kasih ${nama}! Pembayaran sebesar ${totalPembayaran.textContent} berhasil dilakukan.`);
+    window.location.href = "history.html";
   });
 });
