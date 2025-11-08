@@ -38,4 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   renderCart();
+  const checkoutBtn = document.getElementById("checkoutBtn");
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (cart.length === 0) {
+        alert("Keranjang masih kosong!");
+        return;
+      }
+      localStorage.setItem("checkoutCart", JSON.stringify(cart));
+      window.location.href = "payment.html";
+    });
+  }
+
+
 });
