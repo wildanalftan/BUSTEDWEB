@@ -78,3 +78,16 @@ function updateCartIcon() {
 document.addEventListener("DOMContentLoaded", () => {
   updateCartIcon();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () {
+      const confirmLogout = confirm("Apakah Anda yakin ingin logout?");
+      if (confirmLogout) {
+        window.location.href = "index.html"; // arahkan ke halaman utama
+      }
+    });
+  }
+});
