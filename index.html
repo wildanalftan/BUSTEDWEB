@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BUSTED WORLD - Essential Wear</title>
 
-  
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="css/style.css">
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body class="bg-dark text-light">
 
-  
+  <!-- HEADER / NAVBAR -->
   <header class="sticky-top bg-black border-bottom border-secondary py-3">
     <div class="container d-flex flex-wrap align-items-center justify-content-between">
       <h1 class="h4 fw-bold mb-0">BUSTED WORLD</h1>
@@ -23,25 +25,31 @@
         <a class="nav-link text-light text-uppercase mx-2" href="#home">Home</a>
         <a class="nav-link text-light text-uppercase mx-2" href="#shop">Shop</a>
         <a class="nav-link text-light text-uppercase mx-2" href="#contact">Contact</a>
-        <a class="nav-link text-light text-uppercase mx-2" href="history.html">History</a>
+
+        <!-- History sekarang ada di folder user/ -->
+        <a class="nav-link text-light text-uppercase mx-2" href="user/history.html">History</a>
       </nav>
 
-    <div>
-        <a href="cart.html" class="text-light fs-5 me-3 position-relative">
+      <div>
+        <!-- Cart di folder user/ -->
+        <a href="user/cart.html" class="text-light fs-5 me-3 position-relative">
           🛒
           <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             0
           </span>
         </a>
-        <a href="login.html" class="text-light fs-5">👤</a>
-    </div>
 
+        <!-- Login di folder auth/ -->
+        <a href="auth/login.html" class="text-light fs-5">👤</a>
+      </div>
     </div>
   </header>
 
- 
+  <!-- HERO SECTION -->
   <section id="home" class="position-relative text-center d-flex align-items-center justify-content-center vh-100 overflow-hidden">
-    <div class="hero-image position-absolute top-0 start-0 w-100 h-100" style="background-image:url('img-logo/WE\ ARE\ READY\ TO\ GET\ BUSTED🥷🏼.png');"></div>
+    <div class="hero-image position-absolute top-0 start-0 w-100 h-100" 
+         style="background-image:url('assets/img-logo/WE ARE READY TO GET BUSTED🥷🏼.png');">
+    </div>
     <div class="position-relative z-2 text-white">
       <h2 class="display-3 fw-bold text-uppercase">BUSTED WORLD</h2>
       <h3 class="fs-3 fw-light mb-3">Essential Wear for the Modern Individual</h3>
@@ -50,71 +58,89 @@
     </div>
   </section>
 
- <section id="shop" class="py-5 text-center">
+  <!-- SHOP SECTION -->
+  <section id="shop" class="py-5 text-center">
     <div class="container">
       <h2 class="display-5 fw-semibold text-uppercase mb-5">Explore Our Collections</h2>
       <div class="row g-4">
+
+        <!-- T-SHIRT -->
         <div class="col-md-4">
           <div class="card border-2 text-light shadow-sm h-100">
-            <div class="category-image" style="background-image:url('img-logo/busted.png'); height:400px; background-size:cover; background-position:center;"></div>
+            <div class="category-image"
+                 style="background-image:url('assets/img-logo/busted.png'); height:400px; background-size:cover; background-position:center;">
+            </div>
             <div class="card-body">
               <h3 class="h5 text-uppercase mb-3">T-Shirts</h3>
-              <a href="Tshirt.html" class="btn btn-light btn-sm text-dark text-uppercase">View Collection</a>
+              <a href="shop/tshirt.html" class="btn btn-light btn-sm text-dark text-uppercase">View Collection</a>
             </div>
           </div>
         </div>
+
+        <!-- HOODIES -->
         <div class="col-md-4">
           <div class="card border-2 text-light shadow-sm h-100">
-            <div class="category-image" style="background-image:url('img-logo/busted.png'); height:400px; background-size:cover; background-position:center;"></div>
+            <div class="category-image"
+                 style="background-image:url('assets/img-logo/busted.png'); height:400px; background-size:cover; background-position:center;">
+            </div>
             <div class="card-body">
               <h3 class="h5 text-uppercase mb-3">Hoodies</h3>
-              <a href="Hoodies.html" class="btn btn-light btn-sm text-dark text-uppercase">View Collection</a>
+              <a href="shop/hoodies.html" class="btn btn-light btn-sm text-dark text-uppercase">View Collection</a>
             </div>
           </div>
         </div>
+
+        <!-- ACCESSORIES -->
         <div class="col-md-4">
           <div class="card border-2 text-light shadow-sm h-100">
-            <div class="category-image" style="background-image:url('img-logo/busted.png'); height:400px; background-size:cover; background-position:center;"></div>
+            <div class="category-image"
+                 style="background-image:url('assets/img-logo/busted.png'); height:400px; background-size:cover; background-position:center;">
+            </div>
             <div class="card-body">
               <h3 class="h5 text-uppercase mb-3">Accessories</h3>
-              <a href="Accessoris.html" class="btn btn-light btn-sm text-dark text-uppercase">View Collection</a>
+              <a href="shop/accessories.html" class="btn btn-light btn-sm text-dark text-uppercase">View Collection</a>
             </div>
           </div>
         </div>
+
       </div>
     </div>
-  </section> 
+  </section>
 
+  <!-- CONTACT SECTION -->
   <section id="contact" class="d-flex align-items-center text-center text-white position-relative vh-100 overflow-hidden">
-  <div class="contact-bg position-absolute top-0 start-0 w-100 h-100" 
-       style="background-image: url('img-logo/WE\ ARE\ READY\ TO\ GET\ BUSTED🥷🏼.png');"></div>
-
-  <div class="container position-relative z-2">
-    <h2 class="display-5 fw-semibold text-uppercase mb-4">Get In Touch</h2>
-    <div class="mb-4">
-      <p>Email: <a href="mailto:info@bustedworld.com" class="text-light fw-bold">info@bustedworld.com</a></p>
-      <p>WhatsApp: <a href="tel:+6281234567890" class="text-light fw-bold">+62 812-3456-7890</a></p>
-      <p>Follow Us: 
-        <a href="https://www.instagram.com/busted.w" class="text-light fw-bold" target="_blank">Instagram</a> | 
-        <a href="#" class="text-light fw-bold" target="_blank">Facebook</a>
-      </p>
+    <div class="contact-bg position-absolute top-0 start-0 w-100 h-100" 
+         style="background-image: url('assets/img-logo/WE ARE READY TO GET BUSTED🥷🏼.png');">
     </div>
-    <form class="mx-auto" style="max-width:600px;">
-      <div class="mb-3">
-        <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="Your Name" required>
-      </div>
-      <div class="mb-3">
-        <input type="email" class="form-control bg-dark text-light border-secondary" placeholder="Your Email" required>
-      </div>
-      <div class="mb-3">
-        <textarea class="form-control bg-dark text-light border-secondary" rows="5" placeholder="Your Message" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-light text-dark text-uppercase fw-semibold">Send Message</button>
-    </form>
-  </div>
-</section>
 
-  
+    <div class="container position-relative z-2">
+      <h2 class="display-5 fw-semibold text-uppercase mb-4">Get In Touch</h2>
+
+      <div class="mb-4">
+        <p>Email: <a href="mailto:info@bustedworld.com" class="text-light fw-bold">info@bustedworld.com</a></p>
+        <p>WhatsApp: <a href="tel:+6281234567890" class="text-light fw-bold">+62 812-3456-7890</a></p>
+        <p>Follow Us:
+          <a href="https://www.instagram.com/busted.w" class="text-light fw-bold" target="_blank">Instagram</a> |
+          <a href="#" class="text-light fw-bold" target="_blank">Facebook</a>
+        </p>
+      </div>
+
+      <form class="mx-auto" style="max-width:600px;">
+        <div class="mb-3">
+          <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control bg-dark text-light border-secondary" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control bg-dark text-light border-secondary" rows="5" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-light text-dark text-uppercase fw-semibold">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="bg-black border-top border-secondary py-3 text-center text-secondary">
     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
       <p class="mb-2 mb-md-0">&copy; 2025 BUSTED WORLD. All rights reserved.</p>
@@ -125,7 +151,9 @@
     </div>
   </footer>
 
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <!-- JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
 </body>
 </html>
