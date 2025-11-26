@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BUSTED WORLD - Purchase History</title>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- FIXED PATH -->
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -26,21 +27,19 @@
     main {
       flex: 1;
     }
-
-    footer {
-      margin-top: auto;
-    }
   </style>
 </head>
 <body class="bg-dark text-light">
+
   <header class="sticky-top bg-black border-bottom border-secondary py-3">
     <div class="container d-flex flex-wrap align-items-center justify-content-between">
       <h1 class="h4 fw-bold mb-0">BUSTED WORLD</h1>
 
       <nav class="nav">
-        <a class="nav-link text-light text-uppercase mx-2" href="index.html">Home</a>
-        <a class="nav-link text-light text-uppercase mx-2" href="index.html#shop">Shop</a>
-        <a class="nav-link text-light text-uppercase mx-2" href="index.html#contact">Contact</a>
+        <!-- FIXED PATH -->
+        <a class="nav-link text-light text-uppercase mx-2" href="../index.html">Home</a>
+        <a class="nav-link text-light text-uppercase mx-2" href="../index.html#shop">Shop</a>
+        <a class="nav-link text-light text-uppercase mx-2" href="../index.html#contact">Contact</a>
         <a class="nav-link text-light text-uppercase mx-2" href="history.html">History</a>
       </nav>
 
@@ -51,10 +50,11 @@
             0
           </span>
         </a>
-        <a href="#" class="text-light fs-5">👤</a>
+        <a href="../auth/login.html" class="text-light fs-5">👤</a>
       </div>
     </div>
   </header>
+
   <main>
     <section id="history" class="py-5 text-center">
       <div class="container">
@@ -72,14 +72,15 @@
                 <th>Status</th>
               </tr>
             </thead>
-            <tbody id="history-table">
-            </tbody>
+            <tbody id="history-table"></tbody>
           </table>
         </div>
+
         <button id="clearHistory" class="btn btn-outline-light mt-4">Hapus Semua Riwayat</button>
       </div>
     </section>
   </main>
+
   <footer class="bg-black border-top border-secondary py-3 text-center text-secondary">
     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
       <p class="mb-2 mb-md-0">&copy; 2025 BUSTED WORLD. All rights reserved.</p>
@@ -90,11 +91,15 @@
     </div>
   </footer>
 
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- FIXED PATH JS -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
   <script>
     const historyTable = document.getElementById("history-table");
     const clearBtn = document.getElementById("clearHistory");
+
     const historyData = JSON.parse(localStorage.getItem("history")) || [];
+
     if (historyData.length === 0) {
       historyTable.innerHTML = `
         <tr>
@@ -110,12 +115,17 @@
             <td>${item.produk}</td>
             <td>${item.jumlah}</td>
             <td>${item.total}</td>
-            <td><span class="badge bg-${item.status === "Selesai" ? "success" : "warning"}">${item.status}</span></td>
+            <td>
+              <span class="badge bg-${item.status === "Selesai" ? "success" : "warning"}">
+                ${item.status}
+              </span>
+            </td>
           </tr>
         `;
         historyTable.insertAdjacentHTML("beforeend", row);
       });
     }
+
     clearBtn.addEventListener("click", () => {
       if (confirm("Hapus semua riwayat pembelian?")) {
         localStorage.removeItem("history");
@@ -127,5 +137,6 @@
       }
     });
   </script>
+ <script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
